@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind - game</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+<body onload="init()">
+    <div class="split left">
+        <div class="row">
+            <table class="table-game" id="table-player1-game">
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+            </table>
+            <table class="table-success table-right" id="table-player1-success">
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+            </table>
+            <div class="timer">
+                <p>Time:</p>
+                <div class="time" id="timer1">60</div>
+                <br>
+                <button class="button-player" onclick="confirmMove(1)">Confirm</button>
+                <br>
+                <button class="button-player" onclick="clearMove(1)">Repeat move</button>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table-game" id="table-player1-combination">
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+            </table>
+            <table class="table-game table-right">
+                <tr>
+                    <td class="game-field" onclick="makeMove('rick', 1)"><img src='../img/rick.png'></td>
+                    <td class="game-field" onclick="makeMove('club', 1)"><img src='../img/club.png'></td>
+                    <td class="game-field" onclick="makeMove('ace', 1)"><img src='../img/ace.png'></td>
+                    <td class="game-field" onclick="makeMove('heart', 1)"><img src='../img/heart.png'></td>
+                    <td class="game-field" onclick="makeMove('diamond', 1)"><img src='../img/diamond.png'></td>
+                    <td class="game-field" onclick="makeMove('morty', 1)"><img src='../img/morty.png'></td>
+                </tr>
+            </table>
+        </div>  
+    </div>
+      
+    <div class="split right">
+        <div class="row">
+            <table class="table-game" id="table-player2-game">
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+            </table>
+            <table class="table-success table-right" id="table-player2-success">
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+                <tr>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                    <td class="success-field"></td>
+                </tr>
+            </table>
+            <div class="timer">
+                <p>Time:</p>
+                <div class="time" id="timer2">60</div>
+                <br>
+                <button class="button-player" onclick="confirmMove(2)">Confirm</button>
+                <br>
+                <button class="button-player" onclick="clearMove(2)">Repeat move</button>
+            </div>
+        </div>     
+        <div class="row">
+            <table class="table-game" id="table-player2-combination">
+                <tr>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                    <td class="game-field"></td>
+                </tr>
+            </table>
+            <table class="table-game table-right">
+                <tr>
+                    <td class="game-field" onclick="makeMove('rick', 2)"><img src='../img/rick.png'></td>
+                    <td class="game-field" onclick="makeMove('club', 2)"><img src='../img/club.png'></td>
+                    <td class="game-field" onclick="makeMove('ace', 2)"><img src='../img/ace.png'></td>
+                    <td class="game-field" onclick="makeMove('heart', 2)"><img src='../img/heart.png'></td>
+                    <td class="game-field" onclick="makeMove('diamond', 2)"><img src='../img/diamond.png'></td>
+                    <td class="game-field" onclick="makeMove('morty', 2)"><img src='../img/morty.png'></td>
+                </tr>
+            </table>
+        </div>  
+    </div>
+</body>
+</html>

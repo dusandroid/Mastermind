@@ -1,0 +1,182 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.center {
+    height: 100%;
+    padding-top: 5%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/*-----------------Game---------------------*/
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+}
+
+.left {
+    left: 0;
+    background-image: url(../img/blue.png);
+}
+
+.right {
+    right: 0;
+    background-image: url(../img/red.jpg);
+}
+ 
+.game-field {
+    background-color: seagreen;
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    border-radius: 5px;
+}
+
+.game-field img {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-game {
+    border-spacing: 15px;
+}
+
+.table-success {
+    border-spacing: 30px;
+}
+
+.table-right {
+    margin-left: 4%;
+}
+
+.success-field {
+    background-color: slategray;
+    width: 35px;
+    height: 35px;
+    z-index: 0;
+    border-radius: 30px;
+}
+
+.success-field img {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%; 
+}
+
+.timer {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20%;
+}
+
+.time {
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-player {
+    width: 80%;
+    height: 7%;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+/*------------------------------------------*/
+
+
+
+
+
+/*-----------------Settings---------------------*/
+.settings-background {
+    background-image: url(../img/background-manual.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+.settings-div {
+    width: 25%;
+    text-align: right;
+    padding: 5px;
+}
+
+.settings-button {
+    width: 20%;
+}
+/*----------------------------------------------*/
+
+
+
+
+
+
+/*-----------------Manual---------------------*/
+.manual-background {
+    background-image: url(../img/background-manual.jpg);
+    background-size: cover;
+}
+
+.checkboxes {
+    width: 25%;
+}
+
+.manual-button {
+    margin-left: 5%;
+}
+
+p {
+    margin-left: 35%;
+    margin-right: 35%;
+    font-size: larger;
+    text-align: justify;
+    text-justify: inter-word;
+}
+/*--------------------------------------------*/

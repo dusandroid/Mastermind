@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind - manual</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="manual-background center">
+        <h1>User manual</h1>
+        <p>
+            Game is played by two players. Every player should hit a combination consisting of four symbols given by the other player. 
+            Each player has seven attempts to hit a given combination. 
+            For every attempt, player receives feedback on how many symbols are correct and on right position and 
+            how many symbols are correct, but not on right position. Each player has 60 seconds to hit a correct combination.
+        </p>
+        <div class="flex-row checkboxes">
+            <input type="checkbox" id="agreement1">
+            <label for="agreement1">Agreement player 1</label>
+            &nbsp;
+            <input type="checkbox" id="agreement2">    
+            <label for="agreement2">Agreement player 2</label>
+            &nbsp;
+            <button class="manual-button" onclick="agreementComplete()">Next</button>
+        </div>        
+    </div>
+</body>
+</html>

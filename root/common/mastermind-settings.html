@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind - settings</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="settings-background center">
+        <h1>Combination setting</h1>
+        <p id="combination-setter">Player 1 sets a combination:</p>
+        <table class="table-game">
+            <tr>
+                <td class="game-field" onclick="makeMove('rick')"><img src='../img/rick.png'></td>
+                <td class="game-field" onclick="makeMove('club')"><img src='../img/club.png'></td>
+                <td class="game-field" onclick="makeMove('ace')"><img src='../img/ace.png'></td>
+                <td class="game-field" onclick="makeMove('heart')"><img src='../img/heart.png'></td>
+                <td class="game-field" onclick="makeMove('diamond')"><img src='../img/diamond.png'></td>
+                <td class="game-field" onclick="makeMove('morty')"><img src='../img/morty.png'></td>
+            </tr>
+        </table>
+        <br>
+        <table class="table-game" id="table-settings">
+            <tr>
+                <td class="game-field"></td>
+                <td class="game-field"></td>
+                <td class="game-field"></td>
+                <td class="game-field"></td>
+            </tr>
+        </table>
+        <br>
+        <div class="settings-div">
+            <button class="settings-button" onclick="clearMove()">Clear</button>
+            &nbsp;
+            <button class="settings-button" onclick="confirmMove()">Confirm</button>
+        </div>
+    </div>
+</body>
+</html>
